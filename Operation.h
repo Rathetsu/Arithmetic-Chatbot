@@ -1,5 +1,5 @@
-#ifndef OPERATION
-#define OPERATION
+#ifndef OPERATIONN
+#define OPERATIONN
 
 #include <iostream>
 #include <string>
@@ -8,15 +8,14 @@
 
 using namespace std;
 
+class Operation
+{
+private:
 
-
-
-
-
-
-
-
-
+public:
+    Operation(int x, int y);
+    ~Operation();
+};
 
 
 #endif

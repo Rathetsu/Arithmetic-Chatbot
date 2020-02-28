@@ -1,4 +1,5 @@
 #include "Parser.h"
+#include "Operation.h"
 #include <algorithm>
 #include <string>
 
@@ -13,6 +14,9 @@ string Parser::INPUT(string s)
 
     forn(i, n)
     {
-        
-    }
+        if( KeyWords.find( s.substr(i, 3) ) != KeyWords.end() )
+        {
+
+        }
+    } 
 }

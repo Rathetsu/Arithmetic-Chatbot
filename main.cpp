@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Chatbot.h"
 
 using namespace std;
 
@@ -10,5 +11,5 @@ typedef vector<string> vstring;
 
 int main()
 {
-    
+    Chatbot.start();
 }

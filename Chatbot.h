@@ -1,8 +1,7 @@
-#ifndef CHATBOT
-#define CHATBOT
+#ifndef CHATBOTTT
+#define CHATBOTTT
 
 #include <iostream>
-
 using namespace std;
 
 class Chatbot
