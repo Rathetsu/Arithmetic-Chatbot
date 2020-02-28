@@ -19,7 +19,6 @@ int main()
     {
         cout << ">";
         getline(cin, sInput);
-        int nSelection = rand() % 5;
         sResponse = "";
         cout << sResponse << endl;
     }
