@@ -11,5 +11,5 @@ typedef vector<string> vstring;
 
 int main()
 {
-    Chatbot.start();
+    Chatbot::Start();
 }
