@@ -69,5 +69,5 @@ class _Divide : Operation
     }
 };
 
-
+#include "Operation.cpp"
 #endif
