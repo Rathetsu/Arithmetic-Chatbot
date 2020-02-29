@@ -7,9 +7,8 @@
     int _Multiply(int x, int y);
     int _Divide(int x, int y); */
 
-    Operation _Add(int x, int y)
+    /*int Operation::_Add(int x, int y)
     {
-        int ans;
-        ans = x + y;
+        int ans = x + y;
         return ans;
-    }
+    }*/
