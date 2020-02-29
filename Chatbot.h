@@ -12,8 +12,6 @@
 
 using namespace std;
 
-typedef vector<string> vstring;
-
 class Chatbot
 {
 private:

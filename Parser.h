@@ -9,15 +9,16 @@
 
 using namespace std;
 
-map<string, string> KeyWords;
-enum Ops { Add, Subtract, Difference, Multiply, Divide };
+map<string, string> KeyWords; //the keyword map being here guarantees that we're able to use it in the Chatbot driver.
 
 class Parser
 {
 public:
 
     Parser();
-    void INPUT(string s);
+    string INPUT(string s);
+    //void Factory();
+    void Parameter(string s);
     ~Parser();
 };
 

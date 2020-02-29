@@ -18,7 +18,7 @@ void Chatbot::Start()
     {
         cout << ">";
         string sInput;
-        p->INPUT(sInput);
+        p->Parameter(p->INPUT(sInput));
     }
 }
 
@@ -46,7 +46,6 @@ void Chatbot::Load_KW()
             else
             {
                 KeyWords[r] = k;
-                cout << KeyWords[r] << endl;
                 dot = 0;
             }
         }
