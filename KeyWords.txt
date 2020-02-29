@@ -1,10 +1,21 @@
-Add : add increment accumulate sum plus increase total addition .
-Subtract : subtract deduct decrease take detract subtraction minus .
-Difference : difference .
-Multiply : multiply multiplication times .
-Divide : divide division .
-
-
-
-
-
+add : Add .
+increment : Add .
+accumulate : Add .
+sum : Add .
+plus : Add .
+increase : Add .
+total : Add .
+addition : Add .
+subtract : Subtract .
+deduct : Subtract .
+decrease : Subtract .
+take : Subtract .
+detract : Subtract .
+subtraction : Subtract .
+minus : Subtract .
+difference : Difference .
+multiply : Multiply .
+multiplication : Multiply .
+times : Multiply .
+divide : Divide .
+division : Divide .
