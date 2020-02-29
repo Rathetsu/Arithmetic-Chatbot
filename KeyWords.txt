@@ -1,0 +1,10 @@
+add increment accumulate sum plus increase total addition : Add
+subtract deduct decrease take detract subtraction : Subtract
+difference : Difference
+multiply multiplication : Multiply
+divide division : Divide
+
+
+
+
+
