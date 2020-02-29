@@ -1,8 +1,8 @@
-Add : add increment accumulate sum plus increase total addition.
-Subtract : subtract deduct decrease take detract subtraction minus.
-Difference : difference.
-Multiply : multiply multiplication times.
-Divide : divide division.
+Add : add increment accumulate sum plus increase total addition .
+Subtract : subtract deduct decrease take detract subtraction minus .
+Difference : difference .
+Multiply : multiply multiplication times .
+Divide : divide division .
 
 
 
