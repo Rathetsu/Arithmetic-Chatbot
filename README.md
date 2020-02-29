@@ -1,5 +1,7 @@
 # Arithmetic-Chatbot
 
+                    *STILL NOT FINISHED*
+
 A chat-bot that does simple arithmetic operations when told by the user.
 
 the program should be able to read any input from the user and execute the input.
