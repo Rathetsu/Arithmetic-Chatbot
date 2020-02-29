@@ -9,15 +9,18 @@
 
 using namespace std;
 
+enum Ops { Add, Subtract, Difference, Multiply, Divide };
+
+map<string, Ops> KeyWords = 
+{
+    ("add", Add) , ("increment", Add)
+};
+
+
 class Parser
 {
-private:
-    map<string, Operation> KeyWords = 
-    {
-        ("add", _Add) , ("increment", _Add)
-    };
-
 public:
+
     Parser();
     string INPUT(string s);
     ~Parser();
