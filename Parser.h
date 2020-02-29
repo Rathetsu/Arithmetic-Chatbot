@@ -9,22 +9,17 @@
 
 using namespace std;
 
+map<string, string> KeyWords;
 enum Ops { Add, Subtract, Difference, Multiply, Divide };
-
-map<string, Ops> KeyWords = 
-{
-    ("add", Add) , ("increment", Add)
-};
-
 
 class Parser
 {
 public:
 
     Parser();
-    string INPUT(string s);
+    void INPUT(string s);
     ~Parser();
 };
 
-
+#include "Parser.cpp"
 #endif

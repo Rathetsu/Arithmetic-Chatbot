@@ -1,6 +1,4 @@
 #include "Chatbot.h"
-#include "Parser.h"
-#include "Operation.h"
 #include <algorithm>
 #include <vector>
 #include <string>
@@ -8,9 +6,11 @@
 using namespace std;
 
 #define forn(i, n) for(int i = 0; i < n; i++) 
-typedef vector<string> vstring;
+#define _KW "KeyWords.txt"
 
-void Chatbot::start()
+Chatbot::Chatbot() {}
+
+void Chatbot::Start()
 {
     Parser *p = new Parser();
 
@@ -21,4 +21,39 @@ void Chatbot::start()
         p->INPUT(sInput);
     }
 }
+
+void Chatbot::Load_KW()
+{
+    string s;   string r;   string k;  bool colon = 0;   bool dot = 0;
+
+    ifstream in(_KW);
+
+    while(in >> s)
+    {
+        if ( s == "." ) { colon = 0; dot = 1;}
+        if ( s == ":" ) { colon = 1; }
+
+        if(!colon && !dot)
+        {
+            r = s;
+        }
+        else
+        {
+            if (!dot)
+            {
+                k = s;
+            }
+            else
+            {
+                KeyWords[r] = k;
+                cout << KeyWords[r] << endl;
+                dot = 0;
+            }
+        }
+    }
+
+    in.close();
+}
+
+Chatbot::~Chatbot() {}
 

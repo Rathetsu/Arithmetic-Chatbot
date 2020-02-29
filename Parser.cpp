@@ -2,12 +2,13 @@
 #include "Operation.h"
 #include <algorithm>
 #include <string>
+#include <map>
 
 #define forn(i, n) for(int i = 0; i < n; i++) 
 
 Parser::Parser() {}
 
-string Parser::INPUT(string s)
+void Parser::INPUT(string s)
 {
     getline(cin, s);
     int n = s.length();
@@ -18,5 +19,5 @@ string Parser::INPUT(string s)
         {
 
         }
-    } 
+    }
 }
