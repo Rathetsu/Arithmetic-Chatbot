@@ -13,7 +13,7 @@ class Operation
 {
 private:
 public:
-    Operation(int x, int y);
+    Operation(double x, double y);
     virtual double calculate(double x, double y) = 0;
     ~Operation();
 };
