@@ -13,64 +13,84 @@ class Operation
 {
 private:
 public:
+    double ans;
     Operation(double x, double y);
-    virtual double calculate(double x, double y) = 0;
+    virtual double calc(double x, double y) = 0;
     ~Operation();
 };
 
 class _Add : Operation
 {
-    double calculate(double x, double y)
+public:
+    _Add();
+    double calc(double x, double y)
     {
-        double ans = x + y;
+        ans = x + y;
         return ans;
     }
+    ~_Add();
 };
 
 class _Subtract : Operation
 {
-    double calculate(double x, double y)
+public:
+    _Subtract();
+    double calc(double x, double y)
     {
-        double ans = x - y;
+        ans = x - y;
         return ans;
     }
+    ~_Subtract();
 };
 
 class _Difference : Operation
 {
-    double calculate(double x, double y)
+public:
+    _Difference();
+    double calc(double x, double y)
     {
-        double ans = abs(x - y);
+        ans = abs(x - y);
         return ans;
     }
+    ~_Difference();
 };
 
 class _Multiply : Operation
 {
-    double calculate(double x, double y)
+public:
+    _Multiply();
+    double calc(double x, double y)
     {
-        double ans = x * y;
+        ans = x * y;
         return ans;
     }
+    ~_Multiply();
 };
 
 class _Divide : Operation
 {
-    double calculate(double x, double y)
+public:
+    _Divide();
+    double calc(double x, double y)
     {
-        double ans = x / y;
+        ans = x / y;
         return ans;
     }
+    ~_Divide();
 };
 
 class _Power : Operation
 {
-    double calculate(double x, double y)
+public:
+    _Power();
+    double calc(double x, double y)
     {
-        double pow(double x, double y); 
+        ans = pow(x, y);
         return ans;
     }
+    ~_Power();
 };
 
 #include "Operation.cpp"
+#include "Parser.cpp"
 #endif

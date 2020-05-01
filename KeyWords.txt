@@ -6,6 +6,7 @@ plus : Add .
 increase : Add .
 total : Add .
 addition : Add .
++ : Add .
 subtract : Subtract .
 deduct : Subtract .
 decrease : Subtract .
@@ -13,9 +14,14 @@ take : Subtract .
 detract : Subtract .
 subtraction : Subtract .
 minus : Subtract .
+- : Subtract .
 difference : Difference .
 multiply : Multiply .
 multiplication : Multiply .
 times : Multiply .
+* : Multiply .
 divide : Divide .
 division : Divide .
+/ : Divide .
+power : Power .
+^ : Power .
