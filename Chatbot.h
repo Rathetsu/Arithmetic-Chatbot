@@ -4,7 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include "Parser.h"
-#include "Operation.h"
+//#include "Operation.h"
 #include <map>
 #include <algorithm>
 #include <vector>
@@ -14,9 +14,6 @@ using namespace std;
 
 class Chatbot
 {
-private:
-    
-
 public:
     Chatbot();
     void Start();

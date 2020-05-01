@@ -17,7 +17,7 @@ public:
 
     Parser();
     string INPUT(string s);
-    //void Factory();
+    bool Factory(double &x);
     void Parameter(string s);
     ~Parser();
 };
