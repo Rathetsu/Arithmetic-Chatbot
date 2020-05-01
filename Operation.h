@@ -5,60 +5,69 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <math.h>
 
 using namespace std;
 
 class Operation
 {
 private:
-
 public:
     Operation(int x, int y);
-    virtual int calculate(int x, int y) = 0;
+    virtual double calculate(double x, double y) = 0;
     ~Operation();
 };
 
-class _Add : Operation 
+class _Add : Operation
 {
-    int calculate(int x, int y)
+    double calculate(double x, double y)
     {
-        int ans = x + y;
+        double ans = x + y;
         return ans;
     }
 };
 
-class _Subtract : Operation 
+class _Subtract : Operation
 {
-    int calculate(int x, int y)
+    double calculate(double x, double y)
     {
-        int ans = x - y;
+        double ans = x - y;
         return ans;
     }
 };
 
-class _Difference : Operation 
+class _Difference : Operation
 {
-    int calculate(int x, int y)
+    double calculate(double x, double y)
     {
-        int ans = abs( x - y );
+        double ans = abs(x - y);
         return ans;
     }
 };
 
-class _Multiply : Operation 
+class _Multiply : Operation
 {
-    int calculate(int x, int y)
+    double calculate(double x, double y)
     {
-        int ans = x * y;
+        double ans = x * y;
         return ans;
     }
 };
 
-class _Divide : Operation 
+class _Divide : Operation
 {
-    int calculate(int x, int y)
+    double calculate(double x, double y)
     {
-        int ans = x / y;
+        double ans = x / y;
+        return ans;
+    }
+};
+
+class _Power : Operation
+{
+    double calculate(double x, double y)
+    {
+        double pow(double x, double y); 
         return ans;
     }
 };
