@@ -1,6 +1,6 @@
 # Arithmetic-Chatbot
 
-                    *STILL NOT FINISHED*
+                    *ONLY HANDLES SIMPLE CASES RIGHT NOW. WILL BE ADDING FEATURES IN THE FUTURE.*
 
 A chat-bot that does simple arithmetic operations when told by the user.
 
