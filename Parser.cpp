@@ -6,8 +6,8 @@
 
 #define forn(i, n) for(int i = 0; i < n; i++)
 
-vector<string> vs;
-vector<double> vp;
+
+
 
 int word_count = 0;
 enum Ops { Add, Subtract, Difference, Multiply, Divide };
@@ -18,11 +18,13 @@ unordered_map<string, Ops> Ops_map =
 
 Parser::Parser() {}
 
-void Parser::Parameter(string s)
+vector<double> Parser::Parameter(string s)
 {
-    int n = s.length();
     int number_begin = 0;
-    bool num = 0;
+    bool num = false;
+    vector<double> vp;
+    int n = s.length();
+    vp.clear();
     forn(i, n)
     {
         if (isdigit(s[i]) && !num)
@@ -31,37 +33,42 @@ void Parser::Parameter(string s)
             num = true;
         }
 
-        if (!isdigit(s[i]) && num)
+        if (!isdigit(s[i]) && num && s[i] != '.')
         {
             vp.push_back(stod(s.substr(number_begin, i - number_begin)));
             num = false;
         }
     }
+    return vp;
 }
 
-string Parser::INPUT(string s)
+vector<string> Parser::INPUT(string s)
 {
-    getline(cin, s);
+    int word_begin = 0;
+    vector<string> vs;
+    vs.clear();
     int n = s.length();
-    int word_begin = 0;  
-
+    size_t t = s.find_first_of("+-*/^");
+    if(t!=string::npos)
+    {
+        vs.push_back(s.substr(t,1));
+    }
     forn(i, n)
     {
-        if( s[i] == ' ' )
+        if (s[i] == ' ')
         {
-            vs.push_back( s.substr(word_begin, i - word_begin) );
+            vs.push_back(s.substr(word_begin, i - word_begin));
             i++;
             word_begin = i;
             word_count++;
         }
     }
 
-    return s;
+    return vs;
 }
 
-bool Parser::Factory(double &result)
+/*bool Parser::Factory(double &result)
 {
-    bool success = true;
     forn(i, word_count)
     {
         if (KeyWords.find(vs[i]) != KeyWords.end())
@@ -72,40 +79,68 @@ bool Parser::Factory(double &result)
             {
                 _Add op;
                 result = op.calc(vp[0], vp[1]);
-                return success;
+                cout << vp[0] << " " <<  vp[1] << endl;
+                return true;
             }
             case Subtract:
             {
                 _Subtract op;
                 result = op.calc(vp[0], vp[1]);
-                return success;
+                return true;
             }
             case Difference:
             {
                 _Difference op;
                 result = op.calc(vp[0], vp[1]);
-                return success;
+                return true;
             }
             case Multiply:
             {
                 _Multiply op;
                 result = op.calc(vp[0], vp[1]);
-                return success;
+                return true;
             }
             case Divide:
             {
                 _Divide op;
                 double result = op.calc(vp[0], vp[1]);
-                return success;
+                return true;
             }
             }
         }
         else
         {
-            success = false;
-            return success;
+            return false;
         }
     }
+}*/
+
+Operation *Parser::Factory(string OpType, double x, double y)
+{
+    switch (Ops_map[KeyWords[OpType]])
+    {
+    case Add:
+    {
+        return new _Add(x, y);
+    }
+    case Subtract:
+    {
+        return new _Subtract(x, y);
+    }
+    case Difference:
+    {
+        return new _Difference(x, y);
+    }
+    case Multiply:
+    {
+        return new _Multiply(x, y);
+    }
+    case Divide:
+    {
+        return new _Divide(x, y);
+    }
+    }
+    return NULL;
 }
 
 Parser::~Parser() {}

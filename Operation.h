@@ -11,86 +11,85 @@ using namespace std;
 
 class Operation
 {
-private:
+protected:
+    double x, y;
+
 public:
     double ans;
-    Operation(double x, double y);
-    virtual double calc(double x, double y) = 0;
-    ~Operation();
+    Operation(double _x, double _y)
+    {
+        x = _x;
+        y = _y;
+    }
+    virtual double calc() = 0;
+    ~Operation(){};
 };
 
-class _Add : Operation
+class _Add : public Operation
 {
 public:
-    _Add();
-    double calc(double x, double y)
+    _Add(double _x, double _y) : Operation(_x, _y){};
+    double calc()
     {
-        ans = x + y;
-        return ans;
+        return x + y;
     }
-    ~_Add();
+    ~_Add(){};
 };
 
-class _Subtract : Operation
+class _Subtract : public Operation
 {
 public:
-    _Subtract();
-    double calc(double x, double y)
+    _Subtract(double _x, double _y) : Operation(_x, _y){};
+    double calc()
     {
-        ans = x - y;
-        return ans;
+        return x - y;
     }
-    ~_Subtract();
+    ~_Subtract(){};
 };
 
-class _Difference : Operation
+class _Difference : public Operation
 {
 public:
-    _Difference();
-    double calc(double x, double y)
+    _Difference(double _x, double _y) : Operation(_x, _y){};
+    double calc()
     {
-        ans = abs(x - y);
-        return ans;
+        return abs(x - y);
     }
-    ~_Difference();
+    ~_Difference(){};
 };
 
-class _Multiply : Operation
+class _Multiply : public Operation
 {
 public:
-    _Multiply();
-    double calc(double x, double y)
+    _Multiply(double _x, double _y) : Operation(_x, _y){};
+    double calc()
     {
-        ans = x * y;
-        return ans;
+        return x * y;
     }
-    ~_Multiply();
+    ~_Multiply(){};
 };
 
-class _Divide : Operation
+class _Divide : public Operation
 {
 public:
-    _Divide();
-    double calc(double x, double y)
+    _Divide(double _x, double _y) : Operation(_x, _y){};
+    double calc()
     {
-        ans = x / y;
-        return ans;
+        return x / y;
     }
-    ~_Divide();
+    ~_Divide(){};
 };
 
-class _Power : Operation
+class _Power : public Operation
 {
 public:
-    _Power();
-    double calc(double x, double y)
+    _Power(double _x, double _y) : Operation(_x, _y){};
+    double calc()
     {
-        ans = pow(x, y);
-        return ans;
+        return pow(x, y);
     }
-    ~_Power();
+    ~_Power(){};
 };
 
 #include "Operation.cpp"
-#include "Parser.cpp"
 #endif

@@ -14,11 +14,12 @@ map<string, string> KeyWords; //the keyword map being here guarantees that we're
 class Parser
 {
 public:
-
     Parser();
-    string INPUT(string s);
-    bool Factory(double &x);
-    void Parameter(string s);
+
+    vector<string> INPUT(string s);
+    vector<double> Parameter(string s);
+    Operation *Factory(string OpType, double x, double y);
+
     ~Parser();
 };
 

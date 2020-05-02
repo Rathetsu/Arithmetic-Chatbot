@@ -20,16 +20,26 @@ void Chatbot::Start()
     {
         cout << ">";
         string sInput;
-        p.Parameter(p.INPUT(sInput));
-        if(p.Factory(result))
+        getline(cin, sInput);
+        vector<string> vs = p.INPUT(sInput);
+        vector<double> vp = p.Parameter(sInput);
+
+        /*forn(i,vs.size())
         {
-            cout << "The result is :   " << result << endl;
-        }
-        else
+            
+        }*/
+
+        Operation *OP = p.Factory(vs[0], vp[0], vp[1]);
+
+        if (OP == NULL)
         {
             cout << "I am sorry, I don't understand. Could you ask me something else?" << endl;
         }
-        
+        else
+        {
+            result = OP->calc();
+            cout << "The result is :  " << result << endl;
+        }
     }
 }
 
